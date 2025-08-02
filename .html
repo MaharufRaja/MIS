@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MIS Login Interface</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: pale blue-gray shade;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .login-box {
+      background-color: white;
+      width: 350px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .login-box img {
+      width: 150px;
+      margin-bottom: 20px;
+    }
+
+    .login-box h2 {
+      margin-bottom: 10px;
+      color: darkgray;
+    }
+
+    .login-box p {
+      color: lightgray;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 15px;
+      border: 1px solid lightgray;
+      border-radius: 6px;
+    }
+
+    .login-btn {
+      background-color: steelblue;
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .login-btn:hover {
+      background-color: steelblue;
+    }
+
+    .link-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      color: darkgray;
+      margin-top: 10px;
+    }
+
+    .link-row a {
+      text-decoration: none;
+      color: steelblue;
+    }
+
+    .link-row a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-box">
+    <img src="https://mis.uniglobecollege.edu.np/images/Uniglobelogo.png" alt="Uniglobe Logo">
+    <h2>Sign in to your account</h2>
+    <p>Please enter your name and password to log in</p>
+
+    <form>
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="password" name="password" placeholder="Password" required>
+
+      <select name="role" required>
+        <option value="">-- Select Role --</option>
+        <option value="admin">Admin</option>
+        <option value="teacher">Teacher</option>
+        <option value="student">Student</option>
+        <option value="parent">Parent</option>
+      </select>
+
+      <button type="submit" class="login-btn">LOG IN</button>
+    </form>
+
+    <div class="link-row">
+      <label><input type="checkbox"> Remember me</label>
+      <a href="#">Forgot Password?</a>
+    </div>
+  </div>
+
+</body>
+</html>
