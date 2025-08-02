@@ -1,0 +1,122 @@
+/* Reset some basics */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: linear-gradient(135deg, #f9f9f9 0%, #e2e8f0 100%);
+  color: #1a202c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.logo img {
+  width: 180px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+  transition: transform 0.3s ease;
+}
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+h2 {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+.panel-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  max-width: 700px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.panel {
+  background-color: #ffffff;
+  width: 280px;
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+}
+
+.panel h3 {
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-bottom: 18px;
+  border-bottom: 3px solid #3182ce;
+  padding-bottom: 8px;
+  width: 100%;
+  color: #2c3e50;
+}
+
+/* Different text colors for each panel */
+.admin h3 {
+  border-color: #48bb78; /* green */
+  color: #2f855a;
+}
+.teacher h3 {
+  border-color: #d53f8c; /* pink */
+  color: #97266d;
+}
+.parent h3 {
+  border-color: #4299e1; /* blue */
+  color: #2b6cb0;
+}
+.student h3 {
+  border-color: #38a169; /* dark green */
+  color: #276749;
+}
+
+a {
+  margin-top: auto;
+  background-color: #3182ce;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  box-shadow: 0 6px 10px rgba(49, 130, 206, 0.3);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+  background-color: #2c5282;
+  box-shadow: 0 8px 15px rgba(44, 82, 130, 0.5);
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+  .panel-row {
+    flex-direction: column;
+    gap: 30px;
+    max-width: 320px;
+  }
+  .panel {
+    width: 100%;
+  }
+}
