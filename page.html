@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Uniglobe College Info</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="logo-container">
+    <img src="https://mis.uniglobecollege.edu.np/images/Uniglobelogo.png" 
+         alt="Uniglobe College Logo" class="logo" />
+  </div>
+
+  <section class="info-section" aria-label="College programs and contact">
+    <div class="container">
+      
+      <div class="brand" aria-label="Branding">
+        <h1>Uniglobe College</h1>
+        <p class="tagline">Bringing the best together</p>
+        <p>Uniglobe Secondary School in Kathmandu, Nepal, offers +2 programs in Science, Management and Law.</p>
+        
+        <div class="social-icons" aria-label="Social media links">
+          <a href="https://www.facebook.com/uniglobesecondaryschool" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://x.com/ss_uniglob67808" target="_blank" rel="noopener">X (Twitter)</a>
+          <a href="https://www.instagram.com/uniglobesecondaryschool/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+
+      <div class="programs" aria-label="Programs offered">
+        <h2>Programs</h2>
+        <ul class="accordion" role="list">
+          <li class="accordion-item">
+            <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+              <span>+2 Science Program</span>
+              <span class="indicator">▾</span>
+            </div>
+            <div class="accordion-content" aria-hidden="true">
+              <p>Physics, Chemistry, Biology, Mathematics</p>
+            </div>
+          </li>
+          <li class="accordion-item">
+            <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+              <span>+2 Management Program</span>
+              <span class="indicator">▾</span>
+            </div>
+            <div class="accordion-content" aria-hidden="true">
+              <p>Business Studies, Economics, Accountancy</p>
+            </div>
+          </li>
+          <li class="accordion-item">
+            <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+              <span>+2 Law Program</span>
+              <span class="indicator">▾</span>
+            </div>
+            <div class="accordion-content" aria-hidden="true">
+              <p>Legal Studies, Civics, Ethics</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="contact" aria-label="Contact information">
+        <h2>Contact us</h2>
+        <div class="info">
+          <div class="contact-item">
+            <span>📞</span><span> 01-5321875, 01-5320722, 01-5351409</span>
+          </div>
+          <div class="contact-item">
+            <span>✉</span><span> info@uniglobecollege.edu.np</span>
+          </div>
+          <div class="contact-item">
+            <span>📍</span><span> Kamaladi, Ganeshthan, Kathmandu, Nepal</span><br>
+            <a href="https://www.google.com/maps/place/P859+2MM+Ganeshthan,+Binayak+Marg,+Kathmandu+44600" target="_blank" rel="noopener" style="margin-top:5px; display:inline-block;">
+              Location
+            </a>
+          </div>
+          <div class="cta">
+            <button class="btn" aria-label="Apply now">Apply Now</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('.accordion-header').forEach(header => {
+      header.addEventListener('click', () => toggleAccordion(header));
+      header.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleAccordion(header);
+        }
+      });
+    });
+
+    function toggleAccordion(header) {
+      const content = header.nextElementSibling;
+      const expanded = header.getAttribute('aria-expanded') === 'true';
+
+      header.setAttribute('aria-expanded', !expanded);
+      content.setAttribute('aria-hidden', expanded);
+      content.style.maxHeight = expanded ? null : content.scrollHeight + 'px';
+      header.querySelector('.indicator').textContent = expanded ? '▾' : '▴';
+    }
+  </script>
+
+</body>
+</html>
